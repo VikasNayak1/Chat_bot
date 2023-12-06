@@ -7,56 +7,76 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(135deg,rgb(244, 244, 126),yellow);
+            background: linear-gradient(135deg, rgb(244, 244, 126), yellow);
         }
-
+    
         .container {
             background-color: rgb(244, 244, 244);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-
+    
+        .container:hover {
+            transform: scale(1.05);
+        }
+    
         h1 {
-            color:rgb(169, 107, 21) ;
+            color: rgb(169, 107, 21);
             text-align: center;
         }
-
+    
         p {
             color: #666;
             text-align: center;
         }
-
+    
         .query-title {
             color: #333;
             font-weight: bold;
             margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    
+        .query-title:hover {
+            color: rgb(169, 107, 21);
         }
     </style>
+    
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Vivekanada</h1>
-        <p>Hello! How can I assist you today?</p>
-
-        <div class="query-title">Course Offers?</div>
-        <div class="query-title">Location?</div>
-        <div class="query-title">Events?</div>
-        <div class="query-title">Campus Information?</div>
-        <div class="query-title">Library information?</div>
+        <p>Mind flayers here</p>
+        <p>we can copy and paste it in message box</p>
+        <p>Also works with keywords like for hi you can type hyy</p>
+        <div class="query-title">hi</div>  
+        <div class="query-title">Hello</div>    
+        <div class="query-title">Course Offers</div>
+        <div class="query-title">Location</div>
+        <div class="query-title">adress</div>
+        <div class="query-title">Events</div>
+        <div class="query-title">Campus Information</div>
+        <div class="query-title">Library information</div>
         
-        <div class="query-title">when does college established?</div>
-        <div class="query-title">Who is principal of vcet?</div>
-        <div class="query-title">Who is cooridinater ieee?</div>
-        <div class="query-title">highest package?</div>
+        <div class="query-title">when does college established</div>
+        <div class="query-title">Who is principal of vcet</div>
+        <div class="query-title">Who is cooridinater ieee</div>
+        <div class="query-title">highest package</div>
         <div class="query-title">hod</div>
+        <div class="query-title">contact</div>
+        <div class="query-title">cs</div>
+        <div class="query-title">aiml</div>
+        <div class="query-title">thank you</div>
+        <div class="query-title">bye</div>
 
     </div>
 </body>
