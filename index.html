@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XXX" crossorigin="anonymous" />
+</head>
+<body onload="init()">
+  <div id="main">
+    <header>
+      <img class="img_logo" src="./images/vcet_logo.png" alt="logo">
+      <h2>VCET BOT</h2>
+    </header>
+    
+    <div id="chat-container">
+<div class="left">
+  Hi there 👋
+How can I help you today?
+<a href="./additional/prompt.html">User Guide</a>
+</div>
+    </div>
+    <div class="input">
+      <input type="text" id="msg_send" placeholder="New Message">
+      <button class="send" id="reply" onclick="sendMessage()">Send <i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
