@@ -14,6 +14,9 @@ body {
   overflow: hidden;
   display: grid;
   justify-content: center;
+ 
+ 
+  
 }
 
 #main {
@@ -24,14 +27,29 @@ body {
   width: 100vw;
   max-width: 540px;
   box-shadow: inset 0 0 10px 4px #f6f682;
+  
 }
 
 #chat-container {
+  position: relative;
   overflow-y: scroll;
   height: 82%;
   padding: 0 12px;
   scroll-behavior: smooth;
-  
+}
+
+#chat-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(./images/vcet_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
 }
 header {
   text-align: center;
@@ -147,3 +165,381 @@ span{
 span img{
   width:20px;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+ 
+ 
+  
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 540px;
+  box-shadow: inset 0 0 10px 4px #f6f682;
+  
+}
+
+#chat-container {
+  position: relative;
+  overflow-y: scroll;
+  height: 82%;
+  padding: 0 12px;
+  scroll-behavior: smooth;
+}
+
+#chat-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(./images/vcet_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px); 
+  z-index: -1; 
+}
+header {
+  text-align: center;
+  background:#bcbc64;
+  padding: 8px;
+  font-family: sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 4px #111;
+  box-shadow: 0 4px 8px#f6f682;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+header img {
+  width: 50px;
+  margin-top: 7px;
+}
+.input {
+  flex:1 ;
+  height: 7%;
+  background: linear-gradient(#ececee 50%,#47382a 50%);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-radius: 32px;
+  margin: 8px 16px;
+  min-height: 42px;
+  box-shadow: inset 0 1px 0 #777;
+}
+
+#msg_send {
+  outline: none;
+  font-size: 20px;
+  padding: 0 16px;
+  border-radius: 32px 0 32px 32px;
+  background: #ececee;
+  color: #333;
+  border: solid 1px #777;
+  border-right: none;
+}
+
+.send{
+  outline: none;
+  font-size: 20px;
+  border: none;
+  background:#47382a;
+  border-radius: 32px;
+  color: #eee;
+  transition-duration: 0.2s;
+}
+
+.send:active {
+  font-size: 16px;
+}
+
+
+
+.bot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(bot.jpg);
+  background-size: 100%;
+  margin: 10px;
+}
+
+h3 {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+#robot {
+  display: flex;
+  align-items: center;
+}
+
+
+.left{
+  background-color: #8FC9D6;
+  border-radius:0px 5px 5px 16px;
+  margin:10px 30px 10px 10px;
+  float:left;
+  clear:both;
+  padding:10px;
+  word-wrap: break-word;
+  margin-left:10px;
+}
+.right{
+  background-color: #FFD700; 
+  border-radius:5px  5px 0px 16px;
+  margin:10px 30px 10px 10px;
+  float:right;
+  clear:both;
+  padding:10px;
+  word-wrap:break-word;
+} 
+
+
+.left:after,
+.right:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+span{
+  display: flex;
+}
+span img{
+  width:20px;
+}
+
+:root {
+  --main-bg-color: #f0ead6;
+  --bubble-bg-color: #dbc3a1; 
+  --hover-darken: #5e4a34;
+
+}
+.send {
+  transition: background 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.send:hover {
+  background: var(--hover-darken);
+  transform: scale(1.05); 
+}
+
+
+#chat-container {
+  animation: fadeIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  background-color: var(--main-bg-color); 
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeBackgroundImage {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+#chat-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(./images/vcet_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px); 
+  z-index: -1; 
+  transition: filter 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1s ease-in-out 10s; 
+  
+}
+
+
+
+
+
+.left,
+.right {
+  position: relative;
+  transition: box-shadow 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  background-color: var(--bubble-bg-color); 
+}
+
+.left:hover,
+.right:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.left::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('./images/vcet_logo.png') center/cover; 
+  border-radius: 50%;
+  margin-left: 7px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+ 
+}
+
+.left:hover::before {
+  transform: scale(1.2);
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.input {
+  flex: 1;
+  height: 7%;
+  background: linear-gradient(#ececee 50%, #47382a 50%);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-radius: 32px;
+  margin: 8px 16px;
+  min-height: 42px;
+  box-shadow: inset 0 1px 0 #777;
+  position: relative;
+}
+
+
+#msg_send {
+  outline: none;
+  font-size: 20px;
+  padding: 0 16px;
+  border-radius: 32px 0 32px 32px;
+  background: #ececee;
+  color: #333;
+  border: solid 1px #777;
+  border-right: none;
+  position: relative;
+}
+
+
+.send {
+  outline: none;
+  font-size: 20px;
+  border: none;
+  background: #47382a;
+  border-radius: 32px;
+  color: #eee;
+  transition-duration: 0.2s;
+  position: relative;
+}
+
+
+#msg_send::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 3px;
+  animation: typing 0.8s infinite alternate;
+}
+
+.input:hover #msg_send::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.send:active {
+  font-size: 16px;
+}
+
+.left {
+  background-color: #D9C09E; 
+}
+
+
+.right {
+  background-color: #DEAD6D; 
+}
+
+.right:before {
+  content: "You: ";
+  font-weight: bold;
+  color: #555; 
+}
+
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+header {
+  text-align: center;
+  background: #bcbc64;
+  padding: 8px;
+  font-family: sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 4px #111;
+  box-shadow: 0 4px 8px #f6f682;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInScale 1s ease-out; 
+}
+
