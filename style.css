@@ -562,15 +562,17 @@ header {
   }
 
   .input {
-    height: auto;
-    margin: 8px 0;
+    height: 40px; /* Adjusted height for better visibility on small screens */
+    margin: 8px 16px;
   }
 
   #msg_send {
     border-radius: 32px;
+    padding: 10px; /* Adjusted padding for better visibility on small screens */
   }
 
   .send {
     border-radius: 32px;
+    font-size: 16px; /* Adjusted font size for better visibility on small screens */
   }
 }
