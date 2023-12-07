@@ -562,7 +562,7 @@ header {
   }
 
   .input {
-    height: 40px; /* Adjusted height for better visibility on small screens */
+    height: 20px; /* Adjusted height for better visibility on small screens */
     margin: 8px 16px;
   }
 
