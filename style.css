@@ -544,8 +544,33 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    overflow: auto; /* Allow scrolling on small screens */
+  }
+
   #main {
     max-width: 100%;
-    
+    min-width: 320px; /* Set a minimum width for better visibility */
+  }
+
+  #chat-container {
+    height: 60vh; /* Adjust the height as needed for better visibility on small screens */
+  }
+
+  #chat-container::before {
+    filter: blur(4px); /* Increase blur effect on small screens if needed */
+  }
+
+  .input {
+    height: auto;
+    margin: 8px 0;
+  }
+
+  #msg_send {
+    border-radius: 32px;
+  }
+
+  .send {
+    border-radius: 32px;
   }
 }
