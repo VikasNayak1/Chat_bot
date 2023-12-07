@@ -543,3 +543,9 @@ header {
   animation: fadeInScale 1s ease-out; 
 }
 
+@media only screen and (max-width: 600px) {
+  #main {
+    max-width: 100%;
+    
+  }
+}
